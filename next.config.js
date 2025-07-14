@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  output: 'standalone',
+}
 
 module.exports = {
     images: {
@@ -8,3 +10,5 @@ module.exports = {
     ignoreDuringBuilds: true,
     // ... any other existing configurations
   };
+
+// export default nextConfig;

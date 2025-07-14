@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const Footer = () => {
+    const year = new Date().getFullYear();
   return (
     <div className={`bg-dark w-full h-auto text-white flex flex-col pt-[4vh] pb-[2vh] px-[5vw]`}>
         <div className='hidden md:flex flex-col md:flex-row'>
@@ -18,7 +19,7 @@ const Footer = () => {
                     <p>Chłodna 9</p>
                     <p>00-891 Warszawa</p>
                     <h2 className='font-bold text-[2.3vh] mt-[3vh] '>Kontakt</h2>
-                    <p>parafiachlodna@gmail.com</p>
+                    <p>parafianachlodnej@gmail.com</p>
                     <p>22 620 37 47</p>
             
         </div>
@@ -75,7 +76,7 @@ const Footer = () => {
             </div>
             <div className=' mt-[1vh] w-full hidden md:flex flex-col'>
             <p className='text-center'><Link href="/bibliografia">Bibliografia zdjęć</Link></p>
-                <p className='text-center mt-[1vh]'>© 2023 – Wszelkie prawa zastrzeżone</p>
+                <p className='text-center mt-[1vh]'>© {year} – Wszelkie prawa zastrzeżone</p>
                 <p className='mt-[1vh] text-center'>Developed by - <a href='https://filipolszewski.co.uk'>Filip Olszewski</a></p>
             </div>
             <div className='flex md:hidden flex-col w-full '>
@@ -117,7 +118,7 @@ const Footer = () => {
                     <div>
 
                     <h2 className='font-bold text-[2.3vh] '>Kontakt</h2>
-                    <p>parafiachlodna@gmail.com</p>
+                    <p>parafianachlodnej@gmail.com</p>
                     <p>22 620 37 47</p>
                     </div>
             
@@ -154,7 +155,7 @@ const Footer = () => {
                 </div>
                 <div className=' mt-[1vh] w-full flex flex-col'>
                     <p className='text-center'><Link href="/bibliografia">Bibliografia zdjęć</Link></p>
-                    <p className='text-center mt-[1vh]'>© 2023 – Wszelkie prawa zastrzeżone</p>
+                    <p className='text-center mt-[1vh]'>© {year} – Wszelkie prawa zastrzeżone</p>
                     <p className='mt-[1vh] text-center'>Developed by - <a href='https://filipolszewski.co.uk'>Filip Olszewski</a></p>
                 </div>
             

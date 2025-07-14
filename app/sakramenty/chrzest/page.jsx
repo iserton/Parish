@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from './header'
-import Footer from '@/app/components/footer'
 import Intro from './intro'
 import Detailed from './detailed'
 import Gallery from './gallery'
@@ -21,7 +20,6 @@ const Page = () => {
         
         {/* <Faqs/> */}
         {/* <Documents/> */}
-        <Footer/>
     </div>
   )
 }

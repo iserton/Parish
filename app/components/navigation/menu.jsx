@@ -30,7 +30,7 @@ const Menu = () => {
                     <p>Chłodna 9</p>
                     <p>00-891 Warszawa</p>
                     <h2 className='font-bold text-[30px] mt-[3vh] font-header2'>Kontakt</h2>
-                    <p>parafiachlodna@gmail.com</p>
+                    <p>parafianachlodnej@gmail.com</p>
                     <p>22 620 37 47</p>
                 </div>
                 <div className={`flex flex-col w-full md:w-[65%] text-white text-[35px] justify-center md:ml-[10%] ${menuElement == '' ? '' : 'hidden'} font-header2`}>
@@ -54,8 +54,8 @@ const Menu = () => {
                     {/* <hr className='mt-[1vh] mb-[1vh] border-1'/> */}
                     {/* <Link onClick={closeReset} href="/aktualnosci/wydarzenia">Wydarzenia</Link> */}
                     <hr className='mt-[1vh] mb-[1vh] border-1'/>
-                    <Link onClick={closeReset} href="/aktualnosci/ciekawostki">Ciekawostki z kościoła</Link>
-                    <hr className='mt-[1vh] mb-[1vh] border-1'/>
+                    {/* <Link onClick={closeReset} href="/aktualnosci/ciekawostki">Ciekawostki z kościoła</Link>
+                    <hr className='mt-[1vh] mb-[1vh] border-1'/> */}
                     <Link onClick={closeReset} href="/aktualnosci/kazania">Kazania proboszcza</Link>
                     <hr className='mt-[1vh] mb-[1vh] border-1'/>
                 </div>
@@ -74,8 +74,8 @@ const Menu = () => {
                     {/* <hr className='mt-[1vh] mb-[1vh] border-1'/> */}
                     <Link onClick={closeReset} href="/parafia/kancelaria">Kancelaria</Link>
                     <hr className='mt-[1vh] mb-[1vh] border-1'/>
-                    <Link onClick={closeReset} href="/parafia/galeria">Galeria</Link>
-                    <hr className='mt-[1vh] mb-[1vh] border-1'/>
+                    {/* <Link onClick={closeReset} href="/parafia/galeria">Galeria</Link>
+                    <hr className='mt-[1vh] mb-[1vh] border-1'/> */}
                 </div>
 
                 <div className={`flex flex-col w-[65%] text-white text-[35px] justify-center md:ml-[10%] ${menuElement == 'sakramenty' ? '' : 'hidden'} font-header2`}>

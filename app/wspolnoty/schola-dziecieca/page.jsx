@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from './header'
-import Footer from '@/app/components/footer'
 import Intro from './intro'
 import Intro2 from './Intro2'
 import Banner from './banner'
@@ -14,7 +13,6 @@ const Page = () => {
         <Intro2/>
         <Banner/>
         <Gallery/>
-        <Footer/>
     </div>
   )
 }
