@@ -14,7 +14,7 @@ const Wspolnoty = () => {
                 <Link href="/wspolnoty/schola">
                 <div className='flex w-full h-full bg-black bg-opacity-50 min-h-[30vh] relative hover:bg-white hover:bg-opacity-30 flex-col justify-center items-center'>
                     <div className='absolute z-20 top-0 left-0 w-full h-full bg-black bg-opacity-80 hover:bg-opacity-60'></div>
-                    <Image alt="" src="/schola_dorosla.jpeg" fill objectFit='cover'></Image>
+                    <Image alt="" src="/chor12.jpeg" fill objectFit='cover'></Image>
                     <p className='z-30 text-center text-bold text-white font-header2 text-[4.5vh]'>SCHOLA</p>
                 </div>
                 </Link>
@@ -22,7 +22,7 @@ const Wspolnoty = () => {
                 <Link href="/wspolnoty/schola-dziecieca">
                 <div className='flex w-full h-full relative bg-black bg-opacity-50 min-h-[30vh] hover:bg-white hover:bg-opacity-30 flex-col justify-center items-center'>
                     <div className='absolute z-20 top-0 left-0 w-full h-full bg-black bg-opacity-80 hover:bg-opacity-60'></div>
-                    <Image alt="" src="/schola_dziecieca.jpeg" fill objectFit='cover'></Image>
+                    <Image alt="" src="/rodz6.jpeg" fill objectFit='cover'></Image>
                     <p className='z-20 text-center text-bold text-white font-header2 text-[4.5vh]'>SCHOLA RODZINNA</p>
                 </div>
                 </Link>
@@ -30,7 +30,7 @@ const Wspolnoty = () => {
                 <Link href="/wspolnoty/caritas">
                 <div className='flex w-full h-full relative bg-black bg-opacity-50 min-h-[30vh] hover:bg-white hover:bg-opacity-30 flex-col justify-center items-center'>
                     <div className='absolute z-20 top-0 left-0 w-full h-full bg-black bg-opacity-80 hover:bg-opacity-60'></div>
-                    <Image alt="" src="/caritas.jpeg" fill objectFit='cover'></Image>
+                    <Image alt="" src="/caritasnew2.png" fill objectFit='cover'></Image>
                     <p className='z-20 text-center text-bold text-white font-header2 text-[4.5vh]'>CARITAS</p>
                 </div>
                 </Link>
@@ -38,7 +38,7 @@ const Wspolnoty = () => {
                 <Link href="/wspolnoty/ministranci">
                 <div className='flex w-full h-full relative bg-black bg-opacity-50 min-h-[30vh] hover:bg-white hover:bg-opacity-30 flex-col justify-center items-center'>
                     <div className='absolute z-20 top-0 left-0 w-full h-full bg-black bg-opacity-80 hover:bg-opacity-60'></div>
-                    <Image alt="" src="/ministranci.jpeg" fill objectFit='cover'></Image>
+                    <Image alt="" src="/min3.jpeg" fill objectFit='cover'></Image>
                     <p className='z-20 text-center text-bold text-white font-header2 text-[4.5vh]'>SŁUŻBA LITURGICZNA</p>
                 </div>
                 </Link>
@@ -54,7 +54,7 @@ const Wspolnoty = () => {
                 <Link href="/wspolnoty/mloda-inteligencja">
                 <div className='flex w-full h-full relative bg-black bg-opacity-50 min-h-[30vh] hover:bg-white hover:bg-opacity-30 flex-col justify-center items-center'>
                     <div className='absolute z-20 top-0 left-0 w-full h-full bg-black bg-opacity-80 hover:bg-opacity-60'></div>
-                    <Image alt="" src="/rada_parafialna.jpg" fill objectFit='cover'></Image>
+                    <Image alt="" src="/kmi12.jpeg" fill objectFit='cover'></Image>
                     <p className='z-20 text-center text-bold text-white font-header2 text-[4.5vh]'>KLUB MŁODEJ INTELIGENCJI</p>
                 </div>
                 </Link>
