@@ -56,7 +56,7 @@ const Menu = () => {
                     <hr className='mt-[1vh] mb-[1vh] border-1'/>
                     {/* <Link onClick={closeReset} href="/aktualnosci/ciekawostki">Ciekawostki z kościoła</Link>
                     <hr className='mt-[1vh] mb-[1vh] border-1'/> */}
-                    <Link onClick={closeReset} href="/aktualnosci/kazania">Kazania proboszcza</Link>
+                    <Link onClick={closeReset} href="/aktualnosci/kazania">Kazania Ojca Leszka</Link>
                     <hr className='mt-[1vh] mb-[1vh] border-1'/>
                 </div>
 

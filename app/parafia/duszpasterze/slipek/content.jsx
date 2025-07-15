@@ -5,7 +5,7 @@ const Content = () => {
     <div className='flex flex-row w-full px-[5vw] pt-[18vh] md:pt-[25vh] pb-[10vh] bg-white'>
         
         <div className='w-full md:w-1/2 flex flex-col text-black md:mr-[2vw] justify-center'>
-          <h2 className='text-[4.5vh] font-header2'>Ks. Proboszcz Leszek Slipek</h2>
+          <h2 className='text-[4.5vh] font-header2'>Ks. prałat dr Leszek Slipek</h2>
           <div className='flex md:hidden w-full h-[40vh] md:h-[60vh] relative'>
             <Image alt="ksiadz proboszcz" src="/ks_proboszcz3.jpeg" fill objectFit='cover'/>
           </div>
