@@ -4,8 +4,8 @@ import Image from 'next/image'
 const Content = () => {
   return (
     <div id="first" className='w-full flex flex-col bg-white py-[10vh]'>
-        <div className='flex flex-col gap-5'>
-        <div className=' h-[55vh w-full px-[5v flex flex-col-reverse md:flex-row gap-5'>
+        <div className='flex flex-col gap-5 md:gap-0'>
+        <div className=' h-[55vh w-full px-[5v flex flex-col-reverse md:flex-row gap-5 md:gap-0'>
             <div className='md:w-1/2 w-full h-[40vh] relative '>
                 <Image className="px-[4vw" alt="tlo msza swieta" src="/nabozenstwa2.jpeg" fill objectFit='cover'></Image>
             </div>
@@ -32,7 +32,7 @@ const Content = () => {
             </div>
             
         </div>
-        <div className='mt-[10vh h-[55vh w-full px-[5v flex flex-col md:flex-row gap-5'>
+        <div className='mt-[10vh h-[55vh w-full px-[5v flex flex-col md:flex-row gap-5 md:gap-0'>
             
             <div className='md:w-1/2 w-full justify-center flex flex-col pl-[5vw]'>
                 <h2 className='text-[4.5vh] font-main font-bold'>Spowiedź</h2>
@@ -47,7 +47,7 @@ const Content = () => {
             </div>
             
         </div>
-        <div className='mt-[10vh h-[55vh] w-full px-[5vw flex flex-col-reverse md:flex-row gap-5'>
+        <div className='mt-[10vh h-[55vh] w-full px-[5vw flex flex-col-reverse md:flex-row gap-5 md:gap-0'>
             <div className='md:w-1/2 w-full h-full relative '>
                 <Image className="px-[4vw" alt="tlo msza swieta" src="/nabozenstwa4.jpeg" fill objectFit='cover'></Image>
             </div>
@@ -62,7 +62,7 @@ const Content = () => {
             </div>
             
         </div>
-        <div className='mt-[10vh h-[55vh w-full px-[5vw flex flex-col md:flex-row gap-5'>
+        <div className='mt-[10vh h-[55vh w-full px-[5vw flex flex-col md:flex-row gap-5 md:gap-0'>
             
             <div className='md:w-1/2 w-full justify-center flex flex-col pl-[5vw]'>
             <h2 className='text-[4.5vh] font-main font-bold'>Okres Wielkiego Postu</h2>
