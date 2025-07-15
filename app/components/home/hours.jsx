@@ -35,7 +35,7 @@ const Hours = () => {
                     </div>
                 </div>
                 
-                <div className='md:pl-[1vw] border-l-0 md:border-l-[2px] mt-[2vh] md:mt-0'>
+                <div className='md:pl-[1vw] border-l-0 md:border-l-[2px] mt-[2vh] md:mt-0 md:ml-[1vw]'>
                     <h3 className='font-bold text-[2.3vh] mb-[2vh]'>Spowiedź</h3>
                     <p className='mt-[2vh]'>Dni powszednie: 30 min. przed Mszą Św.</p>
                     <p className='mt-[2vh]'>Sobota: 16:00-18:00 w dolnym kościele</p>
