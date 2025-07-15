@@ -1,26 +1,29 @@
-'use client'
+// 'use client'
 import React from 'react'
-import { useState, useEffect } from 'react'
+// import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { marked } from 'marked'
 import ReactMarkdown from 'react-markdown';
 
-const Content = ({id}) => {
+const Content = async ({id}) => {
     // const router = useRouter()
     // const id = router.query.id
     console.log(id)
     // const [data, setData] = useState(null);
-    const [data, setData] = useState(null)
+    // const [data, setData] = useState(null)
 
     const CustomParagraph = ({ children }) => (
         <p className="my-4">{children}</p>
       );
 
-    useEffect(() => {
-        fetch('https://parafia.bieda.it/api/ogloszenia/' + id +'?populate=*')
-        .then(res => res.json())
-        .then(data => {setData(data)})
-    },[])
+    const res = await fetch('https://parafia.bieda.it/api/ogloszenia/' + id +'?populate=*', { next: { revalidate: 0 } })
+    const data = res.ok && await res.json()
+
+    // useEffect(() => {
+    //     fetch('https://parafia.bieda.it/api/ogloszenia/' + id +'?populate=*')
+    //     .then(res => res.json())
+    //     .then(data => {setData(data)})
+    // },[])
 
     let htmlContent = null
     if (data != null){

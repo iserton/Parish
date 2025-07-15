@@ -1,17 +1,19 @@
-'use client'
+// 'use client'
 import React from 'react'
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const News = () => {
-    const [data, setData] = useState(null)
+const News = async () => {
+    const res = await fetch('https://parafia.bieda.it/api/ogloszenia?populate=*', { next: { revalidate: 0 } })
+    const data = res.ok && await res.json()
+    // const [data, setData] = useState(null)
 
-    useEffect(() => {
-        fetch('https://parafia.bieda.it/api/ogloszenia?populate=*')
-        .then(res => res.json())
-        .then(data => {setData(data)})
-    }, [])
+    // useEffect(() => {
+    //     fetch('https://parafia.bieda.it/api/ogloszenia?populate=*')
+    //     .then(res => res.json())
+    //     .then(data => {setData(data)})
+    // }, [])
 
     console.log(data);
     let years = []
@@ -23,15 +25,18 @@ const News = () => {
         console.log(years.map(year => (yearsData.find(y => y.year == year).data)))
     }
     // const years = Array.from(new Set(data.data.map(item => item.attributes.data.split('-')[0]))).sort().reverse();
-    const [currentYear, changeYear] = useState(new Date().getFullYear());
+    // const [currentYear, changeYear] = useState(new Date().getFullYear());
+    const currentYear = new Date().getFullYear();
     // console.log(currentYear);
     console.log(years);
     // console.log(yearsData);
+
+    if (!data) return <>Problem</>
   return (
 
     <div id="first" className='w-full flex flex-col py-[10vh] bg-white'>
-        
-        <div className='flex flex-row w-full space-x-4 h-[5vh] pb-[5vh] items-center justify-center '>
+
+            <div className='flex flex-row w-full space-x-4 h-[5vh] pb-[5vh] items-center justify-center '>
             {years && years.map(item => (
                 // eslint-disable-next-line react/jsx-key
                 <button onClick={() => changeYear(item)} className={`p-4 ${item == currentYear ? 'bg-dark text-white border-2 border-dark' : 'bg-white text-black border-2 border-black'}`}>

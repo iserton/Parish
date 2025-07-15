@@ -1,21 +1,23 @@
-'use client'
+// 'use client'
 import React from 'react'
-import { useState, useEffect } from 'react'
+// import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { marked } from 'marked'
 
-const Content = ({id}) => {
+const Content = async ({id}) => {
     // const router = useRouter()
     // const id = router.query.id
     console.log(id)
     // const [data, setData] = useState(null);
-    const [data, setData] = useState(null)
+    // const [data, setData] = useState(null)
+    const res = await fetch('https://parafia.bieda.it/api/ciekawostki/' + id +'?populate=*', { next: { revalidate: 0 } })
+    const data = res.ok && await res.json()
 
-    useEffect(() => {
-        fetch('https://parafia.bieda.it/api/ciekawostki/' + id +'?populate=*')
-        .then(res => res.json())
-        .then(data => {setData(data)})
-    },[])
+    // useEffect(() => {
+    //     fetch('https://parafia.bieda.it/api/ciekawostki/' + id +'?populate=*')
+    //     .then(res => res.json())
+    //     .then(data => {setData(data)})
+    // },[])
 
     let htmlContent = null
     if (data != null){

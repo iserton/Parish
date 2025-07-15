@@ -1,43 +1,52 @@
+// 'use client'
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+// import { useState, useEffect } from 'react'
 
-const News = () => {
+const News = async () => {
 
-    const [news, setNews] = useState(null);
-    const [data, setData] = useState(null)
-    const [img1, setImg1] = useState(null)
-    const [img2, setImg2] = useState(null)
-    const [img3, setImg3] = useState(null)
+    // const [news, setNews] = useState(null);
+    // const [data, setData] = useState(null)
+    // const [img1, setImg1] = useState(null)
+    // const [img2, setImg2] = useState(null)
+    // const [img3, setImg3] = useState(null)
+
+    let img1 = null, img2 = null, img3 = null;
 
     function loadImages(id1, id2, id3) {
-        fetch(`https://parafia.bieda.it/api/ogloszenia/${id1}?populate=*`)
+        fetch(`https://parafia.bieda.it/api/ogloszenia/${id1}?populate=*`, { next: { revalidate: 0 } })
         .then(res => res.json())
-        .then(data => setImg1('https://parafia.bieda.it' + data.data.attributes.tlo.data.attributes.url))
+        .then(data => img1 = 'https://parafia.bieda.it' + data.data.attributes.tlo.data.attributes.url)
 
-        fetch(`https://parafia.bieda.it/api/ogloszenia/${id2}?populate=*`)
+        fetch(`https://parafia.bieda.it/api/ogloszenia/${id2}?populate=*`, { next: { revalidate: 0 } })
         .then(res => res.json()) 
-        .then(data => setImg2('https://parafia.bieda.it' + data.data.attributes.tlo.data.attributes.url))
+        .then(data => img2 = 'https://parafia.bieda.it' + data.data.attributes.tlo.data.attributes.url)
 
-        fetch(`https://parafia.bieda.it/api/ogloszenia/${id3}?populate=*`)
+        fetch(`https://parafia.bieda.it/api/ogloszenia/${id3}?populate=*`, { next: { revalidate: 0 } })
         .then(res => res.json()) 
-        .then(data => setImg3('https://parafia.bieda.it' + data.data.attributes.tlo.data.attributes.url))
+        .then(data => img3 = 'https://parafia.bieda.it' + data.data.attributes.tlo.data.attributes.url)
 
         console.log('laduje zdjecia')
     }
-    
-    useEffect(() => {
-        fetch('https://parafia.bieda.it/api/ogloszenia-last-two/')
-        .then(res => res.json())
-        .then(data => {
-            setNews([data[0], data[1], data[2]])
-            return data
-        })
-        .then(data => {
-            loadImages(data[0].id, data[1].id, data[2].id)})
-    }, []);
 
+    const res = await fetch('https://parafia.bieda.it/api/ogloszenia-last-two/', { next: { revalidate: 0 } })
+    const data = res.ok && await res.json()
+    const news = data ? [data[0], data[1], data[2]] : null;
+    data ?? loadImages(data[0].id, data[1].id, data[2].id);
+    
+    // useEffect(() => {
+    //     fetch('https://parafia.bieda.it/api/ogloszenia-last-two/')
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         setNews([data[0], data[1], data[2]])
+    //         return data
+    //     })
+    //     .then(data => {
+    //         loadImages(data[0].id, data[1].id, data[2].id)})
+    // }, []);
+
+    if (!data) return <>Problem</>
   return (
     <div className='flex flex-col w-full py-[10vh] items-center justify-center bg-white text-black'>
         <h2 className='text-[5.5vh] font-header2 mb-[3vh]'>Aktualności</h2>

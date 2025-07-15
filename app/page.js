@@ -1,4 +1,3 @@
-'use client'
 import Image from 'next/image'
 import Loader from './components/navigation/loader'
 import Menu from './components/navigation/menu'
@@ -14,7 +13,6 @@ import Citations from './components/home/citations'
 import Galeria from './components/home/galeria'
 import News from './components/home/news'
 import Banner from './components/home/banner'
-import { useState } from 'react'
 
 
 
